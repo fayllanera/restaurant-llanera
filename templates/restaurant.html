@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+<title>Diner's Reservation</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#restaurant" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESTAURANT</a>
+    <a href="#reservation" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RESERVATION</a>
+    <a href="#search" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SEARCH</a>
+    <a href="#rates" class="w3-bar-item w3-button w3-padding-large w3-hide-small">RATE</a>
+    <a href="login.html" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-small">LOGOUT</a>
+    <a href="#myreservation" onclick="myreservation()" class="w3-bar-item w3-button w3-right w3-padding-large w3-hide-small">MY RESERVATION</a>
+    <a href="#viewrate" onclick="view_ratings()" class="w3-bar-item w3-button w3-padding-large w3-hide-small">VIEW RATINGS</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#restaurant" class="w3-bar-item w3-button w3-padding-large">RESTAURANT</a>
+  <a href="#reservation" class="w3-bar-item w3-button w3-padding-large">RESERVATION</a>
+  <a href="#search" class="w3-bar-item w3-button w3-padding-large">SEARCH</a>
+  <a href="#rates" class="w3-bar-item w3-button w3-padding-large">RATE</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images -->
+  <div class="mySlides w3-display-container w3-center">
+    <img src="static/img/diners.jpg" style="width:100%">
+    <div class="w3-display-bottom middle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="static/img/view1.jpg" style="width:110%">
+    <div class="w3-display-bottom middle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+  <div class="mySlides w3-display-container w3-center">
+    <img src="static/img/reserve.jpg" style="width:100%">
+    <div class="w3-display-bottom middle w3-container w3-text-white w3-padding-32 w3-hide-small">
+    </div>
+  </div>
+
+  <!-- Restaurant List Section -->
+  <div class="w3-black" id="restaurant">
+    <div class="w3-container w3-content w3-padding-64" style="...">
+      <h2 class="w3-wide w3-center">RESTAURANT LIST</h2>
+      <p class="w3-opacity w3-center"><i>Click reservation menu to book your chosen diner!</i></p><br>
+
+      <div class="w3-row-padding w3-padding-32" style="...">
+        <div class="w3-third w3-margin-bottom">
+          <img src="static/img/am's.JPG" style="width:300px; height: 250px;" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Am's Chicken Haus</b></p>
+            <p>Quezon Avenue Extension, Iligan City</p>
+            <p>(063) 221 5220</p>
+            </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="static/img/big.jpg" style="width:295px; height: 250px;" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Big Dipper</b></p>
+            <p>Manuel L. Quezon Avenue, Iligan City</p>
+            <p>(063) 221 2665</p>
+            </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img src="static/img/delecta.JPG" style="width:295px; height: 250px;" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Delecta</b></p>
+            <p>Aguinaldo Street, Iligan City</p>
+            <p>(063) 221 3397</p>
+            </div>
+        </div>
+         <div class="w3-third w3-margin-bottom">
+          <img src="static/img/gaz.jpg" style="width:300px; height: 250px;" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Gazpachos Restaurant</b></p>
+            <p>Buhanginan Hills, Quezon Extension, Pala-o, Iligan City</p>
+            <p>(063) 221 5215</p>
+           </div>
+        </div>
+         <div class="w3-third w3-margin-bottom">
+          <img src="static/img/jy.jpg" style="width:295px; height: 250px;" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>JY Dimsum</b></p>
+            <p>Aguinaldo Street, Pala-o, Iligan City</p>
+            <p>(063) 221 3654</p>
+           </div>
+        </div>
+         <div class="w3-third w3-margin-bottom">
+          <img src="static/img/kelsey's.JPG" style="width:295px; height: 250px;" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Kelsey's</b></p>
+            <p>Bellfranz Building, Quezon Avenue Extension Corner, Ubaldo Laya Avenue, Pala-o, Iligan City</p>
+            <p>(063) 222 8200</p>
+           </div>
+        </div>
+         <div class="w3-third w3-margin-bottom">
+          <img src="static/img/kyla's.JPG" style="width:300px; height: 250px;" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Kyla's Bistro</b></p>
+            <p>Quezon Avenue Extension, Iligan City</p>
+            <p>(063) 221 5877</p>
+           </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+        <img src="static/img/lai.jpg" style="width:295px; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+            <p><b>Lai-Lai Yeung Chow</b></p>
+            <p>Aguinaldo St, Poblacion, Iligan City</p>
+            <p>(063) 221 5320</p>
+           </div>
+        </div>        <div class="w3-third w3-margin-bottom">
+        <img src="static/img/fontina.jpg" style="width:295px; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+            <p><b>Fontina</b></p>
+            <p>Andres Bonifacio Avenue, Iligan City</p>
+            <p>(063) 221 6312</p>
+           </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+        <img src="static/img/rai.jpg" style="width:295px; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+            <p><b>Rai-Rock</b></p>
+            <p>Quezon Avenue Extension, Pala-o, Iligan City</p>
+            <p>(063) 222 1072</p>
+           </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+        <img src="static/img/sun.JPG" style="width:295px; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+            <p><b>Sunburst Fried Chicken</b></p>
+            <p>G.T. Lluch Avenue, Pala-o, Iligan City</p>
+            <p>(063) 224 1195</p>
+           </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+        <img src="static/img/9rs.JPG" style="width:295px; height: 250px;" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+            <p><b>9rs Cafe & Restaurant</b></p>
+            <p>Pedrito Permites Road, San Miguel, Iligan City</p>
+            <p>(063) 222 1925</p>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reservation Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="reservation">
+      <form>
+      <h2 class="w3-wide w3-center">RESERVATION FORM</h2>
+      <p class="w3-opacity w3-center"><i>Reserve your chosen diner!</i></p>
+        <div class="w3-container">
+            <p><label><i class="fa fa-cutlery"></i> Restaurant Choice</label></p>
+            <select id="diner">
+                <option value=""></option>
+                <option value="Am's Chicken Haus">Am's Chicken Haus</option>
+                <option value="Big Dipper">Big Dipper</option>
+                <option value="Delecta">Delecta</option>
+                <option value="Gazpachos">Gazpachos</option>
+                <option value="JY Dimsum">JY Dimsum</option>
+                <option value="Kelsey's">Kelsey's</option>
+                <option value="Kyla's Bistro">Kyla's Bistro</option>
+                <option value="lai-Lai Yeung Chow">Lai-Lai Yeung Chow</option>
+                <option value="Fontina">Fontina</option>
+                <option value="Rai-Rock">Rai-Rock</option>
+                <option value="Sunburst Fried Chicken">Sunburst Fried Chicken</option>
+                <option value="9rs Cafe & Restaurant">9rs Cafe & Restaurant</option>
+            </select>
+            <p><label><i class="fa fa-user"></i> Customer's Name</label></p>
+            <input class="w3-input w3-border" type="text" id="cus_name" placeholder="Enter name">
+            <p><label><i class="fa fa-male"></i> Number of Attendees</label></p>
+            <input class="w3-input w3-border" type="text" id="attendees" placeholder="How many?">
+            <p><label><i class="fa fa-calendar"></i> Date</label></p>
+            <input class="w3-input w3-border" type="text" id="res_date" placeholder="Enter date">
+            <p><label><i class="fa fa-clock-o"></i> Time</label></p>
+            <input class="w3-input w3-border" type="text" id="res_time" placeholder="Enter time">
+            <!--<button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right" onclick="reservation();" value="Reserve"><i class="fa fa-check"></i></button> -->
+            <input class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right" id="save-btn" onclick="reservations();" value="Reserve">
+            <input class="w3-button w3-red w3-section" id="cancel" onclick="reset();" value="clear">
+         </div>
+      </form>
+  </div>
+
+   <!-- Restaurant Search Section -->
+  <div class="w3-black" id="search">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">SEARCH SECTION</h2>
+      <p class="w3-opacity w3-center"><i>Search your favorite diner!</i></p><br>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+             }
+            td, th {
+            background-color: black;
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+            }
+            tr:nth-child(even) {
+            background-color: #444444;
+            }
+        </style>
+        <center>  <input type="text" name="resname" id="resname1" placeholder="Search.."></i>
+	    <button type="Submit" onclick="search();">Search</button>
+        </center>
+        <table class="table" id="results">
+            <tr>
+               <br><br>
+               <th>NAME</th>
+               <th>ADDRESS</th>
+               <th>CONTACT</th>
+            </tr>
+         </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rating Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="rates">
+      <form>
+      <h2 class="w3-wide w3-center">RATING SECTION</h2>
+      <p class="w3-opacity w3-center"><i>Rate your chosen diner!</i></p>
+        <div class="w3-container">
+            <p><label><i class="fa fa-cutlery"></i> Restaurant Choice</label></p>
+            <select id="diner_name">
+                <option value=""></option>
+                <option value="Am's Chicken Haus">Am's Chicken Haus</option>
+                <option value="Big Dipper">Big Dipper</option>
+                <option value="Delecta">Delecta</option>
+                <option value="Gazpachos">Gazpachos</option>
+                <option value="JY Dimsum">JY Dimsum</option>
+                <option value="Kelsey's">Kelsey's</option>
+                <option value="Kyla's Bistro">Kyla's Bistro</option>
+                <option value="Lai-Lai Yeung Chow">Lai-Lai Yeung Chow</option>
+                <option value="Fontina">Fontina</option>
+                <option value="Rai-Rock">Rai-Rock</option>
+                <option value="Sunburst Fried Chicken">Sunburst Fried Chicken</option>
+                <option value="9rs Cafe & Restaurant">9rs Cafe & Restaurant</option>
+            </select>
+            <br><br>
+            <div id="rateYo"></div>
+            <div id="rateYo"></div>
+            <input class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right" id="save-btn" onclick="rate();" value="Send rate">
+         </div>
+      </form>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+
+  <!-- My Reservation Section -->
+  <div class="w3-black w3-padding-64" id="myreservation">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
+      <h2 class="w3-wide w3-center">MY RESERVATION</h2>
+        <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+             }
+            td, th {
+            background-color: black;
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+            }
+            tr:nth-child(even) {
+            background-color: #444444;
+            }
+        </style>
+        <table class="table" id="viewreserve">
+            <tr>
+               <br><br>
+               <th>RESTAURANT</th>
+               <th>NAME</th>
+               <th>ATTENDEES</th>
+               <th>DATE</th>
+               <th>TIME</th>
+            </tr>
+         </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Ratings Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="viewrate">
+      <form>
+      <h2 class="w3-wide w3-center">RATING SECTION</h2>
+          <style>
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+             }
+            td, th {
+            background-color: darkgray;
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+            }
+            tr:nth-child(even) {
+            background-color: darkgray;
+            }
+        </style>
+        <table class="table" id=viewratings>
+          <tr >
+               <br><br>
+               <th>RESTAURANT</th>
+               <th>RATING</th>
+           </tr>
+         </table>
+      </form>
+  </div>
+<script>
+$(function () {
+
+  $("#rateYo").rateYo({
+    rating: 3.6
+  });
+
+});
+</script>
+<script src="static/js/app.js"></script>
+
+<!-- End Page Content -->
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <p class="w3-medium"></p>
+    <p class="w3-medium"></p>
+  <p class="w3-medium"></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+$(function () {
+
+  $("#rateYo").rateYo({
+    starWidth: "40px"
+  });
+
+});
+</script>
+</body>
+</html>
